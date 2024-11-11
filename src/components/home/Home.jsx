@@ -1,3 +1,4 @@
+// src/pages/Home.jsx
 import React, { useState, useEffect } from "react";
 import MainHeader from "../layout/MainHeader";
 import HotelService from "../common/HotelService";
@@ -9,6 +10,8 @@ import { useAuth } from "../auth/AuthProvider";
 import GuhagarGallery from "../common/guhagarImage";
 import BreakFast from "../common/breakFast";
 import Loading from "./Loading"; // Import the Loading component
+import ContactUs from "../common/ContactUs"; // Import the ContactUs component
+import NearbyDistance from "../common/NearByDistrance";
 
 const Home = () => {
 	const location = useLocation();
@@ -17,16 +20,15 @@ const Home = () => {
 	const currentUser = localStorage.getItem("userId");
 
 	useEffect(() => {
-		// Simulate a loading delay
 		const timer = setTimeout(() => {
 			setLoading(false);
-		}, 2000); // Adjust the time as needed (2000ms = 2 seconds)
+		}, 2000);
 
 		return () => clearTimeout(timer);
 	}, []);
 
 	if (loading) {
-		return <Loading />; // Show the loading animation while loading
+		return <Loading />;
 	}
 
 	return (
@@ -41,8 +43,10 @@ const Home = () => {
 				<RoomCarousel />
 				<HotelService />
 				<GuhagarGallery />
+				<NearbyDistance />
 				<BreakFast />
 				<Parallax />
+				<ContactUs /> 
 				<RoomCarousel />
 			</div>
 		</section>
