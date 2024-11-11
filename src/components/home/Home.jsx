@@ -8,7 +8,7 @@ import RoomSearch from "../common/RoomSearch";
 import { useLocation } from "react-router-dom";
 import { useAuth } from "../auth/AuthProvider";
 import GuhagarGallery from "../common/guhagarImage";
-import BreakFast from "../common/breakFast";
+import BreakFast from "../common/BreakFast";
 import Loading from "./Loading"; // Import the Loading component
 import ContactUs from "../common/ContactUs"; // Import the ContactUs component
 import NearbyDistance from "../common/NearByDistrance";
