@@ -1,7 +1,7 @@
 import axios from "axios"
 
 export const api = axios.create({
-	baseURL: "https://adorable-joyan-msp-66b015d2.koyeb.app"
+	baseURL: "http://ec2-16-171-34-3.eu-north-1.compute.amazonaws.com:9192"
 })
 
 export const getHeader = () => {
